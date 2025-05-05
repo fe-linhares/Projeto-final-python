@@ -27,7 +27,7 @@ def jogo():
 
             print(f'Placar: Você {pontos[0]} x {pontos[1]} Máquina')
             continuar = input("Você deseja jogar de novo?(sim/não): ")
-            if continuar.strip().lower() == 'nao' or continuar.strip().lower() == 'nao': #.strip para tirar os espaços
+            if continuar.strip().lower() == 'nao' or continuar.strip().lower() == 'não': #.strip para tirar os espaços
                 break
     print("Fim de jogo")
 jogo()
