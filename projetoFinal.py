@@ -1,6 +1,6 @@
 from random import randint
 
-pontos = [0, 0]  # contador de pontos: [usuário, máquina]
+pontos = [0, 0]  # Placar: [usuário, máquina]
 continuar = 'sim'
 def jogo():
     opcoes = ['Tesoura', 'Pedra', 'Papel']
@@ -26,8 +26,11 @@ def jogo():
                 pontos[1] += 1
 
             print(f'Placar: Você {pontos[0]} x {pontos[1]} Máquina')
-            continuar = input("Você deseja jogar de novo?(sim/não): ")
-            if continuar.strip().lower() == 'nao' or continuar.strip().lower() == 'não': #.strip para tirar os espaços
-                break
+            if pontos[0] == pontos[1]:
+                print("Você esta empatado com a maquina, continue jogando para saber o resultado final")
+            else:
+                continuar = input("Você deseja jogar de novo?(sim/não): ")
+                if continuar.strip().lower() == 'nao' or continuar.strip().lower() == 'não': #.strip para tirar os espaços
+                    break
     print("Fim de jogo")
 jogo()
